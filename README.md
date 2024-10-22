@@ -1,1 +1,1 @@
-python projects
+ python projects and also exercises
