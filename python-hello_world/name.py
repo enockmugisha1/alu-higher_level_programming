@@ -1,3 +1,1 @@
-
-#!/usr/bin/env bash
-print("hello everyone")
+print(f"Best School: {88+10}")
