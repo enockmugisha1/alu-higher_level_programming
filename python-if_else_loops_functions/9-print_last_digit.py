@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # Author - Enock Mugisha
 
+
 def print_last_digit(number):
     """Function to print the last digit of a number."""
     last_digit = abs(number) % 10  # Get the last digit
