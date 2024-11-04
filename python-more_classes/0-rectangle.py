@@ -1,12 +1,3 @@
-#!/usr/bin/python3
-""" 
-an empty rectangle class
-"""
-
-
-
-#!/usr/bin/python3
-"""
 an empty Rectangle class
 """
 
@@ -19,4 +10,4 @@ class Rectangle:
     """ 
     recrtangle class
     """
-    pass
+
