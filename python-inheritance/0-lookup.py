@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""Lookup function"""
 
 
 def lookup(obj):
-    """this is my programs"""
+    """Returns the list of available attributes and methods of an object"""
     return dir(obj)
