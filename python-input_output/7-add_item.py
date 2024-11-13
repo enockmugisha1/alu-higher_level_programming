@@ -1,26 +1,25 @@
 #!/usr/bin/python3
-
-"""this is python."""
-
 import sys
-from 5-save_to_json_file import save_to_json_file
-from 6-load_from_json_file import load_from_json_file
+import json
+from save_to_json_file import save_to_json_file
+from load_from_json_file import load_from_json_file
 
-def main():
-    """Main function to add command-line arguments to a JSON file."""
-    filename = 'add_item.json'
+def add_to_list_and_save(args):
+    """
+    Add all arguments to a Python list and save them to a JSON file.
     
-    # Load existing items from the JSON file, or initialize an empty list if it doesn't exist
+    Args:
+        args: List of arguments to be added to the list.
+    """
     try:
-        items = load_from_json_file(filename)
-    except FileNotFoundError:
-        items = []
-
-    # Add command-line arguments to the list (excluding the script name)
-    items.extend(sys.argv[1:])
-
-    # Save the updated list back to the JSON file
-    save_to_json_file(items, filename)
+        data = load_from_json_file("add_item.json")
+    except:
+        data = []
+    
+    data.extend(args)
+    
+    save_to_json_file(data, "add_item.json")
 
 if __name__ == "__main__":
-    main()
+    args = sys.argv[1:]  # Exclude the script name from arguments
+    add_to_list_and_save(args)
