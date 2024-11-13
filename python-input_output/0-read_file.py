@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-
 def read_file(filename=""):
-    with open("file.xt", "r", encoding = 'UTF8') as p:
-        print(p.read())
+    """Reads a text file (UTF-8) and prints its contents to stdout.
 
+    Args:
+        filename (str): The name of the file to read. Defaults to an empty string.
+    """
+    with open(filename, 'r', encoding='utf-8') as file:
+        print(file.read(), end="")
